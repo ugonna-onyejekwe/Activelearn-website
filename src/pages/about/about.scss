@@ -1,0 +1,163 @@
+@use "../../variables.scss" as *;
+
+.about_wrapper {
+  .about_container {
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+
+    .txt {
+      width: 40%;
+
+      .subtitle {
+        letter-spacing: 10px;
+        font-weight: 600;
+        color: $text2;
+        text-transform: uppercase;
+        font-size: 15px;
+        padding: 0;
+      }
+
+      h2 {
+        text-transform: capitalize;
+      }
+      p {
+        color: $text2;
+        padding: 20px 0;
+      }
+    }
+    .img {
+      width: 50%;
+      height: 400px;
+    }
+  }
+
+  .amenities {
+    margin-top: 100px;
+    padding: 100px 0;
+    background: $main-light;
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+
+      .box {
+        flex: 1;
+        min-width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        h2 {
+          padding: 5px;
+          border: 2px dashed $main;
+          height: 80px;
+          width: 80px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          span {
+            background: $main;
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .icon {
+              color: white;
+              font-size: 25px;
+            }
+          }
+        }
+
+        h3 {
+          text-transform: capitalize;
+          font-size: 17px;
+          margin-top: 25px;
+        }
+        p {
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+
+  .review_container {
+    padding-top: 80px;
+
+    h2 {
+      text-align: center;
+      text-transform: capitalize;
+    }
+    p {
+      text-align: center;
+      color: $text2;
+      padding-top: 10px;
+    }
+
+    .wrapper {
+      margin-top: 50px;
+      padding-bottom: 50px;
+
+      .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        padding: 30px;
+        border-radius: 5px;
+        background: $main-light;
+
+        .img {
+          padding: 5px;
+          border: 2px solid grey;
+          height: 150px;
+          width: 150px;
+          border-radius: 50%;
+          margin-bottom: 20px;
+
+          img {
+            border-radius: inherit;
+          }
+        }
+
+        h3 {
+          text-transform: capitalize;
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .about_wrapper .about_container {
+    flex-direction: column-reverse;
+    gap: 20px;
+
+    .img {
+      width: 100%;
+    }
+    .txt {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .about_wrapper .review_container .wrapper .box .img {
+    height: 100px;
+    width: 100px;
+  }
+}

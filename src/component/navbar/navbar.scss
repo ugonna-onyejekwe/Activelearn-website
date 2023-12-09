@@ -1,0 +1,153 @@
+@use "../../variables.scss" as *;
+
+nav {
+  width: 100%;
+  padding: 20px 0;
+  transition: 0.6s ease;
+  z-index: 1000;
+  background: $main_light;
+  transition: 0.5s ease-in;
+
+  &.active {
+    box-shadow: 0 0 10px grey;
+    transition: 0.5s ease-in;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .overlay {
+    display: none;
+  }
+  .menu_btn {
+    display: none;
+  }
+
+  .nav_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      color: rgb(248, 45, 45);
+      text-transform: capitalize;
+      font-size: 18px;
+
+      span {
+        color: $main;
+      }
+    }
+
+    .navigators {
+      display: flex;
+      align-items: center;
+      gap: 100px;
+
+      .links {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        a {
+          text-transform: capitalize;
+          font-size: 15px;
+          font-weight: bold;
+          color: $text;
+          position: relative;
+
+          &::before {
+            position: absolute;
+            content: "";
+            left: 50%;
+            transform: translateX(-50%);
+            height: 4px;
+            width: 4px;
+            border-radius: 50%;
+            background: $text;
+            bottom: -10px;
+            display: none;
+          }
+          &:hover::before {
+            display: block;
+          }
+
+          &.active::before {
+            display: block;
+          }
+        }
+      }
+
+      button {
+        background: $main;
+        color: white;
+      }
+    }
+  }
+}
+@media (max-width: 900px) {
+  nav {
+    padding: 30px 0;
+  }
+
+  nav .nav_container .navigators {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: $main_light;
+    flex-direction: column;
+    align-items: unset;
+    gap: 30px;
+    padding: 50px 40px;
+    transform: translateY(-110%);
+    transition: 0.5s ease;
+    z-index: 100;
+
+    &.active {
+      transform: translateY(0);
+    }
+
+    .close {
+      width: 100%;
+    }
+
+    .links {
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      align-items: unset;
+
+      a {
+        width: fit-content;
+      }
+    }
+  }
+
+  nav .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: black;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s ease;
+    pointer-events: none;
+
+    &.active {
+      opacity: 0.5;
+      pointer-events: all;
+    }
+  }
+  nav .menu_btn {
+    display: block;
+    cursor: pointer;
+  }
+}

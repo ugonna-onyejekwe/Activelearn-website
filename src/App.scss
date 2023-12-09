@@ -1,0 +1,278 @@
+@use "./variables.scss" as *;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap");
+
+* {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  list-style: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  min-height: 100%;
+  overflow-x: hidden;
+  background: rgb(252, 250, 250);
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+button {
+  padding: 15px 25px;
+  border: 5px;
+  border-radius: 5px;
+  transition: 0.5s ease;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 16px;
+  background: $main;
+  color: white;
+  transition: 0.4s ease;
+
+  &:hover {
+    background: rgb(15, 60, 68);
+  }
+}
+
+.page_header {
+  padding: 100px 0 60px 0;
+  background-image: url("./imgs/header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+
+  h2 {
+    text-transform: capitalize;
+    font-size: 35px;
+    padding-bottom: 20px;
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-transform: capitalize;
+
+    h3 {
+      font-weight: 400;
+      font-size: 16px;
+    }
+  }
+}
+
+.courses_wrapper {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  .box {
+    box-shadow: 0 0 5px grey;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    background: $main_light;
+    flex: 1;
+    min-width: 300px;
+
+    &:hover .img img {
+      transform: scale(1.09);
+    }
+
+    .img {
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .txt {
+      padding: 20px;
+
+      .row_1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 10px;
+
+        p {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-weight: 600;
+          color: $text2;
+
+          &:first-child .icon {
+            color: rgb(94, 92, 92);
+          }
+
+          &:last-child .icon {
+            color: rgb(216, 184, 3);
+          }
+        }
+      }
+
+      h3 {
+        text-transform: capitalize;
+        font-size: 20px;
+        color: $text;
+      }
+      .overview {
+        color: $text2;
+        padding: 15px 0;
+      }
+
+      .row_2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+
+        h4 {
+          font-size: 20px;
+          color: $text2;
+
+          span {
+            font-size: 15px;
+            text-decoration: line-through;
+          }
+        }
+
+        button {
+          background: transparent;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: $text;
+          font-weight: 700;
+          font-size: 15px;
+          background: rgba(146, 145, 145, 0.308);
+          transition: 0.4s ease;
+          position: relative;
+
+          span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .icon {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.teachers_wrapper {
+  padding: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  .box {
+    box-shadow: 0 0 5px grey;
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: $main_light;
+    flex: 1;
+    min-width: 300px;
+
+    &:hover .img img {
+      transform: scale(1.05);
+    }
+
+    .img {
+      width: 100%;
+      height: 350px;
+      border-radius: inherit;
+      overflow: hidden;
+      transition: 0.4s ease;
+    }
+
+    .txt {
+      padding: 15px 0 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      gap: 20px;
+
+      h4 {
+        font-size: 18px;
+        text-transform: capitalize;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        span {
+          font-size: 15px;
+          font-weight: 400;
+          color: $text2;
+        }
+      }
+
+      .icons_div {
+        display: flex;
+        gap: 20px;
+
+        span {
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid $text2;
+          border-radius: 5px;
+          color: $text;
+          transition: 0.4s ease;
+
+          .icon {
+            font-size: 20px;
+            transition: 0.4s ease;
+          }
+          &:hover {
+            background: $main;
+
+            .icon {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease;
+}
+p {
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+@media (max-width: 500px) {
+  .teachers_wrapper .box {
+    padding: 10px;
+
+    .img {
+      height: 300px;
+    }
+  }
+}
