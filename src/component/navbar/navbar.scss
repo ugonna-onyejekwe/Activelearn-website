@@ -63,21 +63,20 @@ nav {
           &::before {
             position: absolute;
             content: "";
-            left: 50%;
-            transform: translateX(-50%);
-            height: 4px;
-            width: 4px;
-            border-radius: 50%;
-            background: $text;
-            bottom: -10px;
-            display: none;
+            left: 0;
+            height: 2px;
+            width: 0;
+            background: $main;
+            border-radius: 4px;
+            bottom: -3px;
+            transition: 0.4s ease;
           }
           &:hover::before {
-            display: block;
+            width: 50%;
           }
 
           &.active::before {
-            display: block;
+            width: 50%;
           }
         }
       }

@@ -98,6 +98,59 @@ export const Home = () => {
         </div>
       </div>
 
+      <div className="search_course_section">
+        <div className="wrapper">
+          <div className="container">
+            <div className="col1">
+              <h2> get reduced fee during this summer!</h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero
+                voluptate obcaecati beatae cumque fugit laudantium? Tempore
+                sapiente ullam ipsum cumque voluptate saepe maiores, fugit
+                pariatur.
+              </p>
+              <div className="box_con">
+                <div className="box">
+                  <span>{icons.awesome}</span>
+                  <h3>expert instructors</h3>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Placeat eos tempore corrupti! Blanditiis quidem eum id
+                    repellat earum veritatis asperiores voluptas nobis.
+                  </p>
+                </div>
+                <div className="box">
+                  <span>{icons.certificate}</span>
+
+                  <h3>free certificate</h3>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Placeat eos tempore corrupti! Blanditiis quidem eum id
+                    repellat earum veritatis asperiores voluptas nobis.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="col2">
+              <form action="#">
+                <h3>search avaliable course</h3>
+
+                <label htmlFor="course name">course name</label>
+                <input type="text" placeholder="eg. microbiology" required />
+
+                <label htmlFor="level">level</label>
+                <input type="text" placeholder="100lv" required />
+
+                <label htmlFor="department">department</label>
+                <input type="text" placeholder="biological science" required />
+                <button>search</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="teacher_section">
         <div className="teacher_container container">
           <h2>our most</h2>
@@ -176,9 +229,7 @@ export const Home = () => {
                           ${i.current_price} <span>${i.old_price}</span>
                         </h4>
 
-                        <button>
-                          view details <span>{icons.arrow}</span>
-                        </button>
+                        <button>{icons.arrow}</button>
                       </div>
                     </div>
                   </div>

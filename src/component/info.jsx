@@ -13,15 +13,15 @@ import data from "../imgs/data.jpg";
 import med from "../imgs/med.jpeg";
 
 // teachers
-import teacher1 from "../imgs/teacher1.jpg";
-import teacher2 from "../imgs/teacher2.jpg";
-import teacher3 from "../imgs/teacher3.jpg";
-import teacher4 from "../imgs/teacher4.jpg";
-import teacher5 from "../imgs/teacher5.jpeg";
-import teacher6 from "../imgs/teacher6.jpg";
-import teacher7 from "../imgs/teacher7.jpeg";
-import teacher8 from "../imgs/teacher8.jpg";
-import teacher9 from "../imgs/teacher9.jpeg";
+import teacher1 from "../imgs/t1.jpg";
+import teacher2 from "../imgs/t2.cms";
+import teacher3 from "../imgs/t3.avif";
+import teacher4 from "../imgs/t4.avif";
+import teacher5 from "../imgs/t5.webp";
+import teacher6 from "../imgs/t6.jpg";
+import teacher7 from "../imgs/t7.jpg";
+import teacher8 from "../imgs/t8.jpg";
+import teacher9 from "../imgs/t8.jpg";
 
 // icons
 import FacebookIcon from "@mui/icons-material/Facebook";

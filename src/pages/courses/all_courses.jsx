@@ -46,9 +46,7 @@ export const All_courses = () => {
                       ${i.current_price} <span>${i.old_price}</span>
                     </h4>
 
-                    <button>
-                      view details <span>{icons.arrow}</span>
-                    </button>
+                    <button>{icons.arrow}</button>
                   </div>
                 </div>
               </div>
