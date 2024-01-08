@@ -366,5 +366,28 @@
     .about .about_container .img {
       height: 350px;
     }
+
+    .search_course_section {
+      .wrapper {
+        .container {
+          .col1 {
+            .box_con {
+              display: flex;
+              margin-top: 30px;
+              gap: 30px;
+              flex-direction: column;
+
+              .box {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .teacher_section {
+      padding-top: 0px;
+    }
   }
 }
